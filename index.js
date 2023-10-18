@@ -46,6 +46,6 @@ function run() {
   if (writeToFile) {
     writeJSONFile('./data', 'characters.json', updatedCharacters);
   } 
-  cartMessage(totalCharacters)
+  cartMessage(totalCharacters,characters)
 }
 run();
