@@ -9,7 +9,6 @@
     "show": "node index.js show",
     "update": "node index.js update",
     "destroy": "node index.js destroy",
-    "score": "node index.js score",
     "obliterate": "node index.js obliterate"
   },
   "keywords": [],

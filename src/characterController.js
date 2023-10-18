@@ -106,7 +106,7 @@ function destroy(characters, characterId) {
     const min = 0
     const randomInt = Math.floor(Math.random() * (max - min + 1)) + min;
     setTimeout(() => {
-        inform(`You have a total of ${totalCharacters} characters created so far. I've got a bad feeling about ${characters[randomInt].name} though. I'd watch that one if I were you...`);
+        inform(`You have a total of ${totalCharacters} characters created so far. I've got a bad feeling about "${characters[randomInt].name}" though. I'd watch that one if I were you...`);
       }, 3000);
   }
 
