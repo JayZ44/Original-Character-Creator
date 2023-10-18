@@ -101,6 +101,12 @@ function destroy(characters, characterId) {
     }
   }
 
+  function cartMessage(totalCharacters){
+    setTimeout(() => {
+        inform(`You have a total of ${totalCharacters} characters created so far.`);
+      }, 3000);
+  }
+
 
 
 module.exports = {
@@ -110,5 +116,6 @@ module.exports = {
     fakeDelay,
     destroy,
     obliterate,
-    edit
+    edit,
+    cartMessage
 }

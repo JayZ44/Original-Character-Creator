@@ -1,6 +1,7 @@
-const {create, index, show, fakeDelay,destroy, obliterate, edit} = require('./src/characterController')
+const {create, index, show, fakeDelay,destroy, obliterate, edit,cartMessage} = require('./src/characterController')
 const {readJSONFile, writeJSONFile} = require ('./src/helpers');
 const characters = readJSONFile("./data", "characters.json");
+let totalCharacters = characters.length;
 const inform = console.log;
 
 function run() {
@@ -39,15 +40,12 @@ function run() {
     updatedCharacters = obliterate(characters);
     writeToFile = true;
         break;
-    case 'score':
-      inform(action);
-      break;
     default:
       inform('There was an error.');
   }
   if (writeToFile) {
     writeJSONFile('./data', 'characters.json', updatedCharacters);
   } 
+  cartMessage(totalCharacters)
 }
-
 run();
